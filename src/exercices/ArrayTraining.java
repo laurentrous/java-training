@@ -6,7 +6,8 @@ public class ArrayTraining {
      */
     public int[] emptyIntArray(int n) {
 
-        return null;
+        int[] tableauEntiers = new int[n];
+        return tableauEntiers;
     }
 
     /**
@@ -15,7 +16,8 @@ public class ArrayTraining {
      */
     public String[] emptyStringArray(int n) {
 
-        return null;
+        String[] tableauTextes = new String[n];
+        return tableauTextes;
     }
 
     /**
@@ -26,7 +28,8 @@ public class ArrayTraining {
      */
     public int[] intArray(int a, int b, int c) {
 
-        return null;
+        int[] tableauEntiers2 = {a, b, c};
+        return tableauEntiers2;
     }
 
     /**
@@ -38,7 +41,8 @@ public class ArrayTraining {
      */
     public String[] stringArray(String a, String b, String c) {
 
-        return null;
+        String tableauTextes2 = {a, b, c};
+        return tableauTextes2;
     }
 
     /**
@@ -47,7 +51,7 @@ public class ArrayTraining {
      */
     public int length(int[] array) {
 
-        return 0;
+        return array.length;
     }
 
     /**
