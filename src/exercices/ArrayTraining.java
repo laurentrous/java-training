@@ -41,7 +41,7 @@ public class ArrayTraining {
      */
     public String[] stringArray(String a, String b, String c) {
 
-        String tableauTextes2 = {a, b, c};
+        String[] tableauTextes2 = {a, b, c};
         return tableauTextes2;
     }
 
@@ -60,7 +60,7 @@ public class ArrayTraining {
      */
     public int firstValue(int[] array) {
 
-        return 0;
+        return array[0];
     }
 
     /**
@@ -69,7 +69,7 @@ public class ArrayTraining {
      */
     public int lastValue(int[] array) {
 
-        return 0;
+        return array[array.length-1];
     }
 
     /**
@@ -79,7 +79,7 @@ public class ArrayTraining {
      */
     public int valueAtPosition(int[] array, int position) {
 
-        return 0;
+        return array[position];
     }
 
     /**
@@ -90,7 +90,8 @@ public class ArrayTraining {
      */
     public int[] replace(int[] array, int value, int position) {
 
-        return null;
+        array[position] = value;
+        return array;
     }
 
     /**
@@ -98,8 +99,11 @@ public class ArrayTraining {
      * @return sum of values of the array, eg: 6
      */
     public int sum(int[] array) {
-
-        return 0;
+        int sum = 0;
+        for(int i=0; i<array.length; i++) {
+            sum += array[i];
+        }
+        return sum;
     }
 
     /**
@@ -109,6 +113,11 @@ public class ArrayTraining {
      */
     public boolean contains(int[] array, int search) {
 
+        for(int i=0; i<array.length; i++) {
+            if(array[i] == search) {
+                return true;
+            }
+        }
         return false;
     }
 
@@ -118,7 +127,16 @@ public class ArrayTraining {
      */
     public String[] capitalize(String[] array) {
 
-        return null;
+        String[] retour = new String[array.length];
+        for(int i=0; i<array.length;i++)
+        {
+            String word = array[i];
+            String first = String.valueOf(word.charAt(0));
+            first = first.toUpperCase();
+            word = first + word.substring(1, word.length());
+            retour[i] = word;
+        }
+        return retour;
     }
 
     /**
@@ -129,6 +147,11 @@ public class ArrayTraining {
      */
     public boolean equals(int[] first, int[] second) {
 
+        for(int i=0;i<first.length;i++) {
+            if(first[i] == second[i]) {
+                return true;
+            }
+        }
         return false;
     }
 
@@ -138,7 +161,11 @@ public class ArrayTraining {
      */
     public int[] reverse(int[] array) {
 
-        return null;
+        int[] reverse = new int[array.length];
+        for(int i=0; i<array.length; i++) {
+            reverse[array.length-i-1] = array[i];
+        }
+        return reverse;
     }
 
     /**
@@ -149,6 +176,13 @@ public class ArrayTraining {
      */
     public int[] concat(int[] first, int[] second) {
 
-        return null;
+        int[] total = new int[first.length + second.length];
+        for(int i=0; i<first.length; i++) {
+            total[i] = first[i];
+        }
+        for(int j=0; j<second.length; j++) {
+            total[j + first.length] = second[j];
+        }
+        return total;
     }
 }
